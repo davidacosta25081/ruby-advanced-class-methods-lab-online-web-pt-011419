@@ -44,6 +44,14 @@ def self.alphabetical
 end
 
 
+def self.new_from_filename(filename)
+  info = filename.split(" - ")
+  song.name = info[1].chomp(".mp3")
+  song.artist_name = info[0]
+  song
+end
+
+
 
 
 
